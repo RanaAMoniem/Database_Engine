@@ -1,0 +1,21 @@
+To insert in BPlustTree insert method is called ( line 314 ). 
+The root is deserialized (line 315).
+InsertValue method is invoked on the root (line 316). 
+By recursion all children are invoked on insertValue (line 598 & 599)
+
+Our convention for naming the internal node files: "index_On_" + "ColName+" + "tableName" +"(value of first key in node)"+I.txt"
+Our convention for naming the leaf node files: "index_On_" + "ColName+" + "tableName" +"(value of first key in node)"+L.txt"
+Our convention for naming the root node files: "index_On_" + "ColName+" + "tableName" +"root"+.txt";
+
+Parents reference children nodes by calling their corresponding saved nodes on disk 
+depending on the convention previously described (node by node when needed is loaded)
+
+To delete in BPlusTree delete method is called (line 356)
+The root is deserialize (line 357)
+The deleteValue method is called on the root(line 358)
+By recursion deleteValue is invoked on all children (line 507)
+When a node is changed through any of the above described processes,
+it's file is deleted and then recreated with the above convention
+
+
+We follow same approach for RTrees with the same method signatures

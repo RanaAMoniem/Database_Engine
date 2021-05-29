@@ -1,0 +1,7 @@
+"Table Name","Column Name","Column Type","Key","Indexed"
+"Student","gpa","java.lang.double","false","false"
+"Student","isHealthy","java.lang.Boolean","false","false"
+"Student","name","java.lang.String","false","true"
+"Student","polygon","java.awt.Polygon","false","true"
+"Student","birthday","java.util.Date","false","false"
+"Student","id","java.lang.Integer","true","false"
